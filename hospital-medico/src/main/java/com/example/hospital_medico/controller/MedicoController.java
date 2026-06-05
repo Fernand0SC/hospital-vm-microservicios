@@ -3,16 +3,20 @@ package com.example.hospital_medico.controller;
 import com.example.hospital_medico.model.Medico;
 import com.example.hospital_medico.service.MedicoService;
 import jakarta.validation.Valid;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
 @RestController
 @RequestMapping("/api/v1/medicos")
 public class MedicoController {
+
+    private static final Logger log = LoggerFactory.getLogger(MedicoController.class);  //se agrega para la implementacion de logs
+
     @Autowired
     private MedicoService medicoService;
 
@@ -27,6 +31,8 @@ public class MedicoController {
 
     @PostMapping
     public ResponseEntity<Medico> guardarMedico(@Valid @RequestBody Medico medico){
+        // ¡ESTA ES LA LÍNEA QUE IMPRIMIRÁ EL JSON EN TU CONSOLA!
+        log.info("Creando nuevo medico con RUN: {}", medico.getRun()); //linea necesaria para el log
         Medico medicoNuevo = medicoService.save(medico);
         return ResponseEntity.status(HttpStatus.CREATED).body(medicoNuevo);
     }
