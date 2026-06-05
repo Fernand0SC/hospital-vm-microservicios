@@ -3,6 +3,8 @@ package com.example.hospital_vm.controller;
 import com.example.hospital_vm.model.Paciente;
 import com.example.hospital_vm.service.PacienteService;
 import jakarta.validation.Valid;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,6 +15,9 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/v1/pacientes")
 public class PacienteController {
+
+    private static final Logger log = LoggerFactory.getLogger(PacienteController.class);  //se agrega para la implementacion de logs
+
     @Autowired
     private PacienteService pacienteService;
 
@@ -27,6 +32,7 @@ public class PacienteController {
 
     @PostMapping
     public ResponseEntity<Paciente> guardarPaciente(@Valid @RequestBody Paciente paciente){
+        log.info("Creando nuevo paciente con RUN: {}", paciente.getRun());  //linea necesaria para el log
         Paciente pacienteNuevo = pacienteService.save(paciente);
         return ResponseEntity.status(HttpStatus.CREATED).body(pacienteNuevo);
     }
