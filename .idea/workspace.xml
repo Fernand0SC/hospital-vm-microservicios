@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b2579e85-31bf-42c2-9e7f-79663a68941b" name="Changes" comment="x">
-      <change afterPath="$PROJECT_DIR$/hospital-vm/src/main/resources/logback-spring.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hospital-vm/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hospital-vm/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hospital-vm/src/main/java/com/example/hospital_vm/controller/PacienteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital-vm/src/main/java/com/example/hospital_vm/controller/PacienteController.java" afterDir="false" />
+    <list default="true" id="b2579e85-31bf-42c2-9e7f-79663a68941b" name="Changes" comment="logs para hospital-paciente">
+      <change afterPath="$PROJECT_DIR$/hospital-atenciones/src/main/resources/logback-spring.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital-atenciones/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hospital-atenciones/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital-atenciones/src/main/java/com/example/hospital_atenciones/controller/AtencionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital-atenciones/src/main/java/com/example/hospital_atenciones/controller/AtencionController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,7 +157,7 @@
       <option name="presentableId" value="Default" />
       <updated>1780514079212</updated>
       <workItem from="1780514081288" duration="141000" />
-      <workItem from="1780601289760" duration="10191000" />
+      <workItem from="1780601289760" duration="10553000" />
     </task>
     <task id="LOCAL-00001" summary="no se q es">
       <option name="closed" value="true" />
@@ -279,7 +279,15 @@
       <option name="project" value="LOCAL" />
       <updated>1780628269276</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="logs para hospital-paciente">
+      <option name="closed" value="true" />
+      <created>1780629089893</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1780629089893</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -312,6 +320,7 @@
     <MESSAGE value="implementacion de dependencia para realizar logs, se debe copiar el codigo y luego recargar apretando la m de maven" />
     <MESSAGE value="implementacion de logs en MedicoController" />
     <MESSAGE value="x" />
-    <option name="LAST_COMMIT_MESSAGE" value="x" />
+    <MESSAGE value="logs para hospital-paciente" />
+    <option name="LAST_COMMIT_MESSAGE" value="logs para hospital-paciente" />
   </component>
 </project>

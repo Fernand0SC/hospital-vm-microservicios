@@ -4,6 +4,8 @@ import com.example.hospital_atenciones.model.Atencion;
 import com.example.hospital_atenciones.client.AtencionDetalleDTO; // Importación correcta
 import com.example.hospital_atenciones.service.AtencionService;
 import jakarta.validation.Valid;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,6 +16,9 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/v1/atenciones")
 public class AtencionController {
+
+    private static final Logger log = LoggerFactory.getLogger(AtencionController.class);  //se agrega para la implementacion de logs
+
 
     @Autowired
     private AtencionService atencionService;
@@ -29,6 +34,8 @@ public class AtencionController {
 
     @PostMapping
     public ResponseEntity<Atencion> guardarAtencion(@Valid @RequestBody Atencion atencion){
+        log.info("Creando nuevo paciente con RUN: {}", atencion.getId());  //linea necesaria para el log
+
         Atencion atencionNueva = atencionService.save(atencion);
         return ResponseEntity.status(HttpStatus.CREATED).body(atencionNueva);
     }
