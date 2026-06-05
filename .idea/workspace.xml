@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b2579e85-31bf-42c2-9e7f-79663a68941b" name="Changes" comment="implementacion de @Valid en los post y put de AtencionController">
-      <change afterPath="$PROJECT_DIR$/hospital-medico/src/main/java/com/example/hospital_medico/exception/GlobalExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="b2579e85-31bf-42c2-9e7f-79663a68941b" name="Changes" comment="implementacion de dependencia para realizar logs, se debe copiar el codigo y luego recargar apretando la m de maven">
+      <change afterPath="$PROJECT_DIR$/hospital-medico/src/main/resources/logback-spring.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital-atenciones/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hospital-atenciones/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital-medico/src/main/java/com/example/hospital_medico/controller/MedicoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital-medico/src/main/java/com/example/hospital_medico/controller/MedicoController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +58,10 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
@@ -85,8 +90,21 @@
         <option value="SpringBootApplicationConfigurationType" />
       </set>
     </option>
+    <option name="configurationStatuses">
+      <map>
+        <entry key="SpringBootApplicationConfigurationType">
+          <value>
+            <map>
+              <entry key="HospitalAtencionesApplication" value="STOPPED" />
+              <entry key="HospitalMedicoApplication" value="STOPPED" />
+              <entry key="HospitalVmApplication" value="STOPPED" />
+            </map>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.HospitalAtencionesApplication">
+  <component name="RunManager" selected="Compound.Iniciar Hospital Completo">
     <configuration name="Iniciar Hospital Completo" type="CompoundRunConfigurationType">
       <toRun name="HospitalAtencionesApplication" type="SpringBootApplicationConfigurationType" />
       <toRun name="HospitalMedicoApplication" type="SpringBootApplicationConfigurationType" />
@@ -140,7 +158,7 @@
       <option name="presentableId" value="Default" />
       <updated>1780514079212</updated>
       <workItem from="1780514081288" duration="141000" />
-      <workItem from="1780601289760" duration="4926000" />
+      <workItem from="1780601289760" duration="8742000" />
     </task>
     <task id="LOCAL-00001" summary="no se q es">
       <option name="closed" value="true" />
@@ -214,7 +232,39 @@
       <option name="project" value="LOCAL" />
       <updated>1780622764400</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="implementacion deexception para dar mensaje personalizado al error en hospital_medico">
+      <option name="closed" value="true" />
+      <created>1780623628855</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1780623628855</updated>
+    </task>
+    <task id="LOCAL-00011" summary="implementacion deexception para dar mensaje personalizado al error en hospital_atenciones">
+      <option name="closed" value="true" />
+      <created>1780623712216</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1780623712216</updated>
+    </task>
+    <task id="LOCAL-00012" summary="implementacion deexception para dar mensaje personalizado al error en hospital_paciente">
+      <option name="closed" value="true" />
+      <created>1780623817275</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1780623817275</updated>
+    </task>
+    <task id="LOCAL-00013" summary="implementacion de dependencia para realizar logs, se debe copiar el codigo y luego recargar apretando la m de maven">
+      <option name="closed" value="true" />
+      <created>1780625534073</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1780625534073</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -241,6 +291,10 @@
     <MESSAGE value="implementacion de @Valid en put y post de PacienteController" />
     <MESSAGE value="implementacion de validaciones bean en modeloAtencion" />
     <MESSAGE value="implementacion de @Valid en los post y put de AtencionController" />
-    <option name="LAST_COMMIT_MESSAGE" value="implementacion de @Valid en los post y put de AtencionController" />
+    <MESSAGE value="implementacion deexception para dar mensaje personalizado al error en hospital_medico" />
+    <MESSAGE value="implementacion deexception para dar mensaje personalizado al error en hospital_atenciones" />
+    <MESSAGE value="implementacion deexception para dar mensaje personalizado al error en hospital_paciente" />
+    <MESSAGE value="implementacion de dependencia para realizar logs, se debe copiar el codigo y luego recargar apretando la m de maven" />
+    <option name="LAST_COMMIT_MESSAGE" value="implementacion de dependencia para realizar logs, se debe copiar el codigo y luego recargar apretando la m de maven" />
   </component>
 </project>
