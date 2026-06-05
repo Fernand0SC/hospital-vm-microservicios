@@ -10,11 +10,13 @@
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
         </processorPath>
         <module name="hospital-vm" />
+        <module name="hospital-medico" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="hospital-medico" options="-parameters" />
       <module name="hospital-vm" options="-parameters" />
     </option>
   </component>
