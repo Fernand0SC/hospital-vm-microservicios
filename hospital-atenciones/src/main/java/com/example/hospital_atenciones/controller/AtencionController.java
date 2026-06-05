@@ -3,6 +3,7 @@ package com.example.hospital_atenciones.controller;
 import com.example.hospital_atenciones.model.Atencion;
 import com.example.hospital_atenciones.client.AtencionDetalleDTO; // Importación correcta
 import com.example.hospital_atenciones.service.AtencionService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -27,7 +28,7 @@ public class AtencionController {
     }
 
     @PostMapping
-    public ResponseEntity<Atencion> guardarAtencion(@RequestBody Atencion atencion){
+    public ResponseEntity<Atencion> guardarAtencion(@Valid @RequestBody Atencion atencion){
         Atencion atencionNueva = atencionService.save(atencion);
         return ResponseEntity.status(HttpStatus.CREATED).body(atencionNueva);
     }
@@ -69,7 +70,7 @@ public class AtencionController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Atencion> actualizarAtencion(@PathVariable Long id, @RequestBody Atencion atencionNuevosDatos){
+    public ResponseEntity<Atencion> actualizarAtencion(@PathVariable Long id,@Valid @RequestBody Atencion atencionNuevosDatos){
         try {
             Atencion atencionExistente = atencionService.findById(id);
             if (atencionExistente == null) {
