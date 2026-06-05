@@ -2,6 +2,7 @@ package com.example.hospital_vm.controller;
 
 import com.example.hospital_vm.model.Paciente;
 import com.example.hospital_vm.service.PacienteService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -25,7 +26,7 @@ public class PacienteController {
     }
 
     @PostMapping
-    public ResponseEntity<Paciente> guardarPaciente(@RequestBody Paciente paciente){
+    public ResponseEntity<Paciente> guardarPaciente(@Valid @RequestBody Paciente paciente){
         Paciente pacienteNuevo = pacienteService.save(paciente);
         return ResponseEntity.status(HttpStatus.CREATED).body(pacienteNuevo);
     }
@@ -41,7 +42,7 @@ public class PacienteController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Paciente> actualizarPaciente(@PathVariable Long id, @RequestBody Paciente paciente) {
+    public ResponseEntity<Paciente> actualizarPaciente(@PathVariable Long id,@Valid @RequestBody Paciente paciente) {
         try {
             // Buscamos directamente el paciente (asumiendo que si no existe, el servicio retorna null)
             Paciente pacienteExistente = pacienteService.findById(id);
